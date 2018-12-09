@@ -1,12 +1,17 @@
 pipeline{
 	agent{
-		docker ( image: ''node:7-alpine' }
+		any
 	     }
 	stages{
 		stage('Test'){
 			steps{
-				sh  'node --version'
+				echo "not working in windows"	
 			     }
-				     }
+			}
+
+		ansiColor('xterm'){	
+		 	echo 'Its ansicolor'
+			 }
+		 	
 		}
 	}	
